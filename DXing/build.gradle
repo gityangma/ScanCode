@@ -4,6 +4,7 @@ plugins {
 
 }
 
+
 android {
 //    resourcePrefix "dxing"
     namespace 'com.example.dxing'
@@ -33,9 +34,10 @@ android {
 
 }
 
-
-
 dependencies {
+
+    testImplementation libs.testng
+    androidTestImplementation libs.androidx.junit
 
     implementation 'androidx.appcompat:appcompat:1.4.2'
     // CameraX依赖模块

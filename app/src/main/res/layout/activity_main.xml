@@ -29,14 +29,14 @@
                 android:id="@+id/rb_qq"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="QQ"
+                android:text="样式1"
                 android:layout_marginStart="6dp" />
 
             <RadioButton
                 android:id="@+id/rb_wechat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="WeChat"
+                android:text="样式2"
                 android:layout_marginStart="6dp" />
 
         </RadioGroup>
@@ -152,7 +152,8 @@
             android:id="@+id/btn_buildstorklogocode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="生成带描边logo二维码（logo 描边 大小 颜色 圆角可配置）" />
+            android:text="生成带描边logo二维码（logo 描边 大小 颜色 圆角可配置）"
+            tools:visibility="gone" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_buildbarcode"
