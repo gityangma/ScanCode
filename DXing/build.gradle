@@ -7,6 +7,7 @@ apply plugin: 'maven-publish'
 
 group = 'com.github.gityangma'
 
+
 android {
 //    resourcePrefix "dxing"
     namespace 'com.example.dxing'
