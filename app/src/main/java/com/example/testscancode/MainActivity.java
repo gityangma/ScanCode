@@ -26,6 +26,7 @@ import io.reactivex.rxjava3.disposables.Disposable;
 
 import com.example.dxing.ScanCodeActivity;
 import com.example.dxing.ScanCodeConfig;
+import com.example.dxing.ZBarDecoder;
 import com.example.dxing.model.ScanMode;
 import com.example.dxing.model.ScanStyle;
 import com.tbruyelle.rxpermissions3.Permission;
@@ -77,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
         btnBuildCode = findViewById(R.id.btn_buildcode);
         btnBuildLogoCode = findViewById(R.id.btn_buildlogocode);
         btnBuildStorkLogoCode = findViewById(R.id.btn_buildstorklogocode);
+        btnBuildStorkLogoCode.setVisibility(View.GONE);
         btnBuildBarCode = findViewById(R.id.btn_buildbarcode);
         btnScanAlbum = findViewById(R.id.btn_scan_album);
 

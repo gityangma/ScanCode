@@ -3,6 +3,9 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
 
 }
+apply plugin: 'maven-publish'
+
+group = 'com.github.gityangma'
 
 android {
 //    resourcePrefix "dxing"
@@ -33,9 +36,10 @@ android {
 
 }
 
-
-
 dependencies {
+
+    testImplementation libs.testng
+    androidTestImplementation libs.androidx.junit
 
     implementation 'androidx.appcompat:appcompat:1.4.2'
     // CameraX依赖模块
