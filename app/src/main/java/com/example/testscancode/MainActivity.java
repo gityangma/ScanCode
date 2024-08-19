@@ -35,7 +35,7 @@ import com.tbruyelle.rxpermissions3.RxPermissions;
 
 
 /**
- * @author apple
+ *
  */
 public class MainActivity extends AppCompatActivity {
 

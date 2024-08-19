@@ -8,7 +8,7 @@ import com.example.dxing.ScanCodeActivity;
 
 
 /**
- * @author am
+ *
  */
 public class MyScanActivity extends ScanCodeActivity {
 

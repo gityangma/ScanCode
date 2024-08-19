@@ -49,6 +49,5 @@ dependencies {
     //RxJava
     implementation "io.reactivex.rxjava3:rxjava:3.0.7"
 
-//    implementation 'com.github.gityangma:ScanCode:1.0.1'
-//    implementation 'com.github.gityangma:ScanCode:1.0.1'
+//    implementation 'com.github.gityangma:scancode:v1.0'
 }
