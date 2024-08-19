@@ -1,4 +1,4 @@
-apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'maven-publish'
 
 // 指定group，com.github.<用户名>，这里我默认填写的是我的github账号，请换成你自己的。
 group='com.github.gityangma'
