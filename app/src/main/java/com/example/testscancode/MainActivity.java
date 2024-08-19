@@ -42,12 +42,7 @@ public class MainActivity extends AppCompatActivity {
     private RadioGroup rgParent, rgScanType, rgCodeColor;
     private AppCompatButton btnScan, btnTwoScan, btnScanMyStyle;
     private AppCompatTextView tvCode;
-    private AppCompatImageView ivCode;
-    private AppCompatButton btnBuildCode,
-            btnBuildLogoCode,
-            btnBuildStorkLogoCode,
-            btnBuildBarCode,
-            btnScanAlbum;
+    private AppCompatButton btnScanAlbum;
 
     private boolean isMultiple = false;
 
@@ -69,19 +64,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         rgParent = findViewById(R.id.rg_parent);
         rgScanType = findViewById(R.id.rg_scan_type);
-        rgCodeColor = findViewById(R.id.rg_codecolor);
         btnScan = findViewById(R.id.btn_scan);
         btnTwoScan = findViewById(R.id.btn_scantwo);
         btnScanMyStyle = findViewById(R.id.btn_scanmystyle);
-        tvCode = findViewById(R.id.tv_code);
-        ivCode = findViewById(R.id.ivcode);
-        btnBuildCode = findViewById(R.id.btn_buildcode);
-        btnBuildLogoCode = findViewById(R.id.btn_buildlogocode);
-        btnBuildStorkLogoCode = findViewById(R.id.btn_buildstorklogocode);
-        btnBuildStorkLogoCode.setVisibility(View.GONE);
-        btnBuildBarCode = findViewById(R.id.btn_buildbarcode);
         btnScanAlbum = findViewById(R.id.btn_scan_album);
 
+        tvCode = findViewById(R.id.tv_code);
         setListener();
     }
 
@@ -118,9 +106,9 @@ public class MainActivity extends AppCompatActivity {
                 if (checkedRadioButtonId == R.id.rb_none){
                     startScan(ScanStyle.NONE, ScanCodeActivity.class);
                 }else if (checkedRadioButtonId == R.id.rb_qq){
-                    startScan(ScanStyle.QQ, ScanCodeActivity.class);
+                    startScan(ScanStyle.M_QQ, ScanCodeActivity.class);
                 }else if (checkedRadioButtonId == R.id.rb_wechat){
-                    startScan(ScanStyle.WECHAT, ScanCodeActivity.class);
+                    startScan(ScanStyle.M_WECHAT, ScanCodeActivity.class);
                 }
 //                switch (checkedRadioButtonId) {
 //                    case R.id.rb_none:
@@ -155,9 +143,9 @@ public class MainActivity extends AppCompatActivity {
                 if (checkedRadioButtonId == R.id.rb_none){
                     startScan(ScanStyle.NONE, MyScanActivity.class);
                 }else if (checkedRadioButtonId == R.id.rb_qq){
-                    startScan(ScanStyle.QQ, MyScanActivity.class);
+                    startScan(ScanStyle.M_QQ, MyScanActivity.class);
                 }else if (checkedRadioButtonId == R.id.rb_wechat){
-                    startScan(ScanStyle.WECHAT, MyScanActivity.class);
+                    startScan(ScanStyle.M_WECHAT, MyScanActivity.class);
                 }
 //                switch (checkedRadioButtonId) {
 //                    case R.id.rb_none:
@@ -183,93 +171,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        //生成二维码
-//        btnBuildCode.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                int checkedRadioButtonId = rgCodeColor.getCheckedRadioButtonId();
-//                Bitmap bitmap = null;
-//                switch (checkedRadioButtonId) {
-//                    case R.id.rb_green:
-//                        bitmap = ScanCodeConfig.createQRCode("star", 500, ContextCompat.getColor(MainActivity.this, R.color.green), Color.WHITE);
-//                        break;
-//                    case R.id.rb_red:
-//                        bitmap = ScanCodeConfig.createQRCode("star", 500, Color.RED, Color.WHITE);
-//                        break;
-//                    case R.id.rb_black:
-//                    default:
-//                        bitmap = ScanCodeConfig.createQRCode("star", 500, Color.BLACK, Color.WHITE);
-//                        break;
-//                }
-//                ivCode.setImageBitmap(bitmap);
-//            }
-//        });
-//
-//        //生成带logo二维码
-//        btnBuildLogoCode.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                int checkedRadioButtonId = rgCodeColor.getCheckedRadioButtonId();
-//                Bitmap bitmap = null;
-//                switch (checkedRadioButtonId) {
-//                    case R.id.rb_green:
-//                        bitmap = ScanCodeConfig.createQRCodeWithLogo("star", SizeUtils.dp2px(getApplicationContext(), 200), ContextCompat.getColor(MainActivity.this, R.color.green), Color.WHITE, BitmapFactory.decodeResource(getResources(), R.mipmap.ttk), SizeUtils.dp2px(getApplicationContext(), 60), SizeUtils.dp2px(getApplicationContext(), 60), SizeUtils.dp2px(getApplicationContext(), 10), SizeUtils.dp2px(getApplicationContext(), 10));
-//                        break;
-//                    case R.id.rb_red:
-//                        bitmap = ScanCodeConfig.createQRCodeWithLogo("star", SizeUtils.dp2px(getApplicationContext(), 200), Color.RED, Color.WHITE, BitmapFactory.decodeResource(getResources(), R.mipmap.ttk), SizeUtils.dp2px(getApplicationContext(), 60), SizeUtils.dp2px(getApplicationContext(), 60), SizeUtils.dp2px(getApplicationContext(), 10), SizeUtils.dp2px(getApplicationContext(), 10));
-//                        break;
-//                    case R.id.rb_black:
-//                    default:
-//                        bitmap = ScanCodeConfig.createQRCodeWithLogo("star", SizeUtils.dp2px(getApplicationContext(), 200), Color.BLACK, Color.WHITE, BitmapFactory.decodeResource(getResources(), R.mipmap.ttk), SizeUtils.dp2px(getApplicationContext(), 60), SizeUtils.dp2px(getApplicationContext(), 60), SizeUtils.dp2px(getApplicationContext(), 10), SizeUtils.dp2px(getApplicationContext(), 10));
-//                        break;
-//                }
-//                ivCode.setImageBitmap(bitmap);
-//            }
-//        });
-//
-//        //生成带描边logo二维码
-//        btnBuildStorkLogoCode.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                int checkedRadioButtonId = rgCodeColor.getCheckedRadioButtonId();
-//                Bitmap bitmap = null;
-//                switch (checkedRadioButtonId) {
-//                    case R.id.rb_green:
-//                        bitmap = ScanCodeConfig.createQRCodeWithStrokeLogo("star", SizeUtils.dp2px(getApplicationContext(), 200), ContextCompat.getColor(MainActivity.this, R.color.green), Color.WHITE, BitmapFactory.decodeResource(getResources(), R.mipmap.ttk), SizeUtils.dp2px(getApplicationContext(), 60), SizeUtils.dp2px(getApplicationContext(), 60), SizeUtils.dp2px(getApplicationContext(), 10), SizeUtils.dp2px(getApplicationContext(), 10), SizeUtils.dp2px(getApplicationContext(), 2), ContextCompat.getColor(MainActivity.this, R.color.colorAccent));
-//                        break;
-//                    case R.id.rb_red:
-//                        bitmap = ScanCodeConfig.createQRCodeWithStrokeLogo("star", SizeUtils.dp2px(getApplicationContext(), 200), Color.RED, Color.WHITE, BitmapFactory.decodeResource(getResources(), R.mipmap.ttk), SizeUtils.dp2px(getApplicationContext(), 60), SizeUtils.dp2px(getApplicationContext(), 60), SizeUtils.dp2px(getApplicationContext(), 10), SizeUtils.dp2px(getApplicationContext(), 10), SizeUtils.dp2px(getApplicationContext(), 2), ContextCompat.getColor(MainActivity.this, R.color.colorAccent));
-//                        break;
-//                    case R.id.rb_black:
-//                    default:
-//                        bitmap = ScanCodeConfig.createQRCodeWithStrokeLogo("star", SizeUtils.dp2px(getApplicationContext(), 200), Color.BLACK, Color.WHITE, BitmapFactory.decodeResource(getResources(), R.mipmap.ttk), SizeUtils.dp2px(getApplicationContext(), 60), SizeUtils.dp2px(getApplicationContext(), 60), SizeUtils.dp2px(getApplicationContext(), 10), SizeUtils.dp2px(getApplicationContext(), 10), SizeUtils.dp2px(getApplicationContext(), 2), ContextCompat.getColor(MainActivity.this, R.color.colorAccent));
-//                        break;
-//                }
-//                ivCode.setImageBitmap(bitmap);
-//            }
-//        });
-//
-//        //生成条形码
-//        btnBuildBarCode.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                int checkedRadioButtonId = rgCodeColor.getCheckedRadioButtonId();
-//                Bitmap bitmap = null;
-//                switch (checkedRadioButtonId) {
-//                    case R.id.rb_green:
-//                        bitmap = ScanCodeConfig.createBarCode("23423423523", 500, 200, ContextCompat.getColor(MainActivity.this, R.color.green), Color.WHITE, ContextCompat.getColor(MainActivity.this, R.color.green), true);
-//                        break;
-//                    case R.id.rb_red:
-//                        bitmap = ScanCodeConfig.createBarCode("23423423523", 500, 200, Color.RED, Color.WHITE, Color.RED, true);
-//                        break;
-//                    case R.id.rb_black:
-//                    default:
-//                        bitmap = ScanCodeConfig.createBarCode("23423423523", 500, 200, Color.BLACK, Color.WHITE, Color.BLACK, true);
-//                        break;
-//                }
-//                ivCode.setImageBitmap(bitmap);
-//            }
-//        });
+
     }
 
     private void toAlbum() {

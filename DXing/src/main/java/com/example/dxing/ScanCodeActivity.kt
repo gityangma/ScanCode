@@ -122,11 +122,11 @@ open class ScanCodeActivity : BaseScanActivity(), OnScancodeListener {
     private fun addScanView(style: Int?) {
         rlParentContent = findViewById(R.id.rlparent)
         when (style) {
-            ScanStyle.QQ -> {
+            ScanStyle.M_QQ -> {
                 baseScanView = ScanQqView(this)
             }
 
-            ScanStyle.WECHAT -> {
+            ScanStyle.M_WECHAT -> {
                 baseScanView = ScanWechatView(this)
             }
 

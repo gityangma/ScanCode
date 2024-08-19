@@ -96,78 +96,10 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_code"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-
-        <RadioGroup
-            android:id="@+id/rg_codecolor"
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal"
-            android:visibility="gone"
-            >
 
-            <RadioButton
-                android:id="@+id/rb_black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="默认"
-                android:checked="true" />
-
-            <RadioButton
-                android:id="@+id/rb_green"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="绿码"
-                android:layout_marginStart="10dp" />
-
-            <RadioButton
-                android:id="@+id/rb_red"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="红码"
-                android:layout_marginStart="10dp" />
-
-        </RadioGroup>
-
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_buildcode"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="生成单独二维码（大小 颜色可配置）"
-            android:visibility="gone"
             />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_buildlogocode"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="生成带logo二维码（大小 颜色 圆角可配置）"
-            android:visibility="gone"
-            />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_buildstorklogocode"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="生成带描边logo二维码（logo 描边 大小 颜色 圆角可配置）"
-            tools:visibility="gone" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_buildbarcode"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="生成条形码（大小 颜色 内容是否显示可配置）"
-            android:visibility="gone"
-            />
-
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/ivcode"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>
